@@ -281,7 +281,7 @@ nvim /boot/loader/entries/arch.conf
 title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /initramfs-linux.img
-options root=UUID=<uuid-of-btrfs-root> rw rootflags=subvol=@
+options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/nvme0n1p2) rw rootflags=subvol=@
 ```
 
 Use `blkid` to get the correct UUID:
