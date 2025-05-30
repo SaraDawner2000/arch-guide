@@ -120,7 +120,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 ## 📦 Install the Base System
 
 ```sh
-pacstrap -K /mnt base linux linux-firmware btrfs-progs neovim git base-devel man-db man-pages less **iwctl iwd** 
+pacstrap -K /mnt base linux linux-firmware btrfs-progs neovim git base-devel man-db man-pages less iwctl iwd
 ```
 
 * `base`: Core Arch Linux userspace tools
