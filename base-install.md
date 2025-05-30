@@ -120,7 +120,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 ## 📦 Install the Base System
 
 ```sh
-pacstrap -K /mnt base linux linux-firmware btrfs-progs neovim git base-devel man-db man-pages less
+pacstrap -K /mnt base linux linux-firmware btrfs-progs neovim git base-devel man-db man-pages less **iwctl iwd** 
 ```
 
 * `base`: Core Arch Linux userspace tools
@@ -130,6 +130,7 @@ pacstrap -K /mnt base linux linux-firmware btrfs-progs neovim git base-devel man
 * `neovim`, `git`: Useful base tools
 * `base-devel`: Needed for building packages (e.g. from the AUR)
 * `man-db`, `man-pages`, `less`: For `man` support
+* `iwctl`, `iwd`: you won't have a way to connect to wifi on the new install otherwise
 * `-K`: Copy host keyring (for pacman trust setup)
 
 ---
