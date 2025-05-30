@@ -299,5 +299,5 @@ blkid -s PARTUUID -o value /dev/nvme0n1p2 > /boot/loader/entries/arch.conf
 * You can optionally configure `sbctl` later if you want to set up custom Secure Boot keys.
 
 ---
-
+alias history="history 0"
 ✅ Done! You're now ready to reboot into your custom-built Arch system!
