@@ -281,7 +281,11 @@ nvim /boot/loader/entries/arch.conf
 title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /initramfs-linux.img
-options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/nvme0n1p2) rw rootflags=subvol=@
+options root=PARTUUID=<uuid-of-btrfs-root> rw rootflags=subvol=@
+```
+get the PARTUUID by running:
+```
+blkid -s PARTUUID -o value /dev/nvme0n1p2 > /boot/loader/entries/arch.conf
 ```
 
 **Important**: use the UUID from your Btrfs partition, **not** the FAT32 EFI partition.
