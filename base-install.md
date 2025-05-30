@@ -284,12 +284,6 @@ initrd  /initramfs-linux.img
 options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/nvme0n1p2) rw rootflags=subvol=@
 ```
 
-Use `blkid` to get the correct UUID:
-
-```sh
-blkid
-```
-
 **Important**: use the UUID from your Btrfs partition, **not** the FAT32 EFI partition.
 
 ---
